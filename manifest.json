@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "AWS Favorites Menu",
+  "version": "0.1.0",
+  "description": "Puts AWS favorites back into the nav bar",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": []
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.aws.amazon.com/*"],
+      "css": ["src/content-scripts/main.css"],
+      "js": ["src/content-scripts/main.js"]
+    }
+  ]
+}
